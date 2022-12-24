@@ -14,6 +14,11 @@
   </head>
 
   <body>
+    <?php
+    session_start();
+    echo $_SESSION['password'];
+    echo $_SESSION['name'];
+    ?>
     <?php include '../templates/navbar.php'; ?>
 
     <div class="">
@@ -27,7 +32,7 @@
             <img src="../assets/images/img-01.jpg" />
             <figcaption class="">
               <h2>PLACEHOLDER VG TITLE TO BE FETCHED FROM DB</h2>
-              <a href="game-detail.html">View more</a>
+              <a href="game-detail.php">View more</a>
             </figcaption>
           </figure>
           <div class="date-informer">
@@ -40,7 +45,7 @@
             <img src="../assets/images/img-04.jpg" />
             <figcaption class="">
               <h2>PLACEHOLDER VG TITLE TO BE FETCHED FROM DB</h2>
-              <a href="game-detail.html">View more</a>
+              <a href="game-detail.php">View more</a>
             </figcaption>
           </figure>
           <div class="date-informer">
@@ -53,7 +58,7 @@
             <img src="../assets/images/img-05.jpg" />
             <figcaption class="">
               <h2>PLACEHOLDER VG TITLE TO BE FETCHED FROM DB</h2>
-              <a href="game-detail.html">View more</a>
+              <a href="game-detail.php">View more</a>
             </figcaption>
           </figure>
           <div class="date-informer">
@@ -66,7 +71,7 @@
             <img src="../assets/images/img-06.jpg" />
             <figcaption class="">
               <h2>PLACEHOLDER VG TITLE TO BE FETCHED FROM DB</h2>
-              <a href="game-detail.html">View more</a>
+              <a href="game-detail.php">View more</a>
             </figcaption>
           </figure>
           <div class="date-informer">
@@ -79,7 +84,7 @@
             <img src="../assets/images/img-01.jpg" />
             <figcaption class="">
               <h2>PLACEHOLDER VG TITLE TO BE FETCHED FROM DB</h2>
-              <a href="game-detail.html">View more</a>
+              <a href="game-detail.php">View more</a>
             </figcaption>
           </figure>
           <div class="date-informer">
@@ -92,7 +97,7 @@
             <img src="../assets/images/img-02.jpg" />
             <figcaption class="">
               <h2>PLACEHOLDER VG TITLE TO BE FETCHED FROM DB</h2>
-              <a href="game-detail.html">View more</a>
+              <a href="game-detail.php">View more</a>
             </figcaption>
           </figure>
           <div class="date-informer">
@@ -105,7 +110,7 @@
             <img src="../assets/images/img-07.jpg" />
             <figcaption class="">
               <h2>PLACEHOLDER VG TITLE TO BE FETCHED FROM DB</h2>
-              <a href="game-detail.html">View more</a>
+              <a href="game-detail.php">View more</a>
             </figcaption>
           </figure>
           <div class="date-informer">
@@ -118,7 +123,7 @@
             <img src="../assets/images/img-08.jpg" />
             <figcaption class="">
               <h2>PLACEHOLDER VG TITLE TO BE FETCHED FROM DB</h2>
-              <a href="game-detail.html">View more</a>
+              <a href="game-detail.php">View more</a>
             </figcaption>
           </figure>
           <div class="date-informer">
@@ -131,7 +136,7 @@
             <img src="../assets/images/img-09.jpg" />
             <figcaption class="">
               <h2>PLACEHOLDER VG TITLE TO BE FETCHED FROM DB</h2>
-              <a href="game-detail.html">View more</a>
+              <a href="game-detail.php">View more</a>
             </figcaption>
           </figure>
           <div class="date-informer">
@@ -144,7 +149,7 @@
             <img src="../assets/images/img-10.jpg" />
             <figcaption class="">
               <h2>PLACEHOLDER VG TITLE TO BE FETCHED FROM DB</h2>
-              <a href="game-detail.html">View more</a>
+              <a href="game-detail.php">View more</a>
             </figcaption>
           </figure>
           <div class="date-informer">
@@ -157,7 +162,7 @@
             <img src="../assets/images/img-11.jpg" />
             <figcaption class="">
               <h2>PLACEHOLDER VG TITLE TO BE FETCHED FROM DB</h2>
-              <a href="game-detail.html">View more</a>
+              <a href="game-detail.php">View more</a>
             </figcaption>
           </figure>
           <div class="date-informer">
@@ -170,7 +175,7 @@
             <img src="../assets/images/img-12.jpg" />
             <figcaption class="">
               <h2>PLACEHOLDER VG TITLE TO BE FETCHED FROM DB</h2>
-              <a href="game-detail.html">View more</a>
+              <a href="game-detail.php">View more</a>
             </figcaption>
           </figure>
           <div class="date-informer">
@@ -183,7 +188,7 @@
             <img src="../assets/images/img-13.jpg" />
             <figcaption class="">
               <h2>PLACEHOLDER VG TITLE TO BE FETCHED FROM DB</h2>
-              <a href="game-detail.html">View more</a>
+              <a href="game-detail.php">View more</a>
             </figcaption>
           </figure>
           <div class="date-informer">
@@ -196,7 +201,7 @@
             <img src="../assets/images/img-14.jpg" />
             <figcaption class="">
               <h2>PLACEHOLDER VG TITLE TO BE FETCHED FROM DB</h2>
-              <a href="game-detail.html">View more</a>
+              <a href="game-detail.php">View more</a>
             </figcaption>
           </figure>
           <div class="date-informer">
@@ -209,7 +214,7 @@
             <img src="../assets/images/img-15.jpg" />
             <figcaption class="">
               <h2>PLACEHOLDER VG TITLE TO BE FETCHED FROM DB</h2>
-              <a href="game-detail.html">View more</a>
+              <a href="game-detail.php">View more</a>
             </figcaption>
           </figure>
           <div class="date-informer">
@@ -222,7 +227,7 @@
             <img src="../assets/images/img-16.jpg" />
             <figcaption class="">
               <h2>PLACEHOLDER VG TITLE TO BE FETCHED FROM DB</h2>
-              <a href="game-detail.html">View more</a>
+              <a href="game-detail.php">View more</a>
             </figcaption>
           </figure>
           <div class="date-informer">
@@ -231,6 +236,8 @@
         </div>
       </div>
 
+      <?php include 'gallery-upload-panel.php'?>
+    
       <div class="menu-bar">
         <a
           href="javascript:void(0);"
@@ -266,7 +273,7 @@
         >
       </div>
     </div>
-
+    
     <?php include '../templates/footer.php'; ?>
   </body>
 </html>

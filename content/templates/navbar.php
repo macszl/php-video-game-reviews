@@ -2,7 +2,7 @@
   <div class="container">
     <a
       class="navbar-brand"
-      href="../main/index.html"
+      href="../main/index.php"
     >
       VGReviews.com
     </a>
@@ -11,14 +11,14 @@
       <li class="nav-item">
         <a
           class="navbar-small-txt"
-          href="../etc/admin.html"
+          href="../etc/admin.php"
           >Admin</a
         >
       </li>
       <li class="nav-item">
         <a
           class="navbar-small-txt"
-          href="../etc/contact.html"
+          href="../etc/contact.php"
           >Contact</a
         >
       </li>

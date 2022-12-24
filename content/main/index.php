@@ -23,7 +23,7 @@
           Rate your enjoyment. <br />
           Tell your friends what is good.
         </div>
-        <a class="backdrop-button">Get started, it's free!</a>
+        <a class="backdrop-button" href="../login/register.php">Get started, it's free!</a>
       </div>
     </div>
     <div class="body-content">
@@ -38,7 +38,7 @@
             <h2>
               <span>Featured Game</span>
             </h2>
-            <a href="game.html">View more</a>
+            <a href="../main/game-detail.php">View more</a>
           </figcaption>
         </figure>
 
@@ -51,7 +51,7 @@
             <h2>
               <span>Featured Game</span>
             </h2>
-            <a href="game.html">View more</a>
+            <a href="../main/game-detail.php">View more</a>
           </figcaption>
         </figure>
 
@@ -64,7 +64,7 @@
             <h2>
               <span>Featured Game</span>
             </h2>
-            <a href="game.html">View more</a>
+            <a href="../main/game-detail.php">View more</a>
           </figcaption>
         </figure>
 
@@ -77,7 +77,7 @@
             <h2>
               <span>Featured Game</span>
             </h2>
-            <a href="game.html">View more</a>
+            <a href="../main/game-detail.php">View more</a>
           </figcaption>
         </figure>
       </div>
@@ -85,25 +85,25 @@
         <div class="feature">
           <div class="feature-panel">
             <img src="../assets/icons/star.svg" class="icon"/>
-            <h3 class="tm-text-primary">Rate your games</h3>
+            <h4 class="tm-text-primary">Rate your games</h4>
           </div>
         </div>
         <div class="feature">
           <div class="feature-panel">
             <img src="../assets/icons/heart.svg" class="icon"/>
-            <h3 class="tm-text-primary">Mark your favourites</h3>
+            <h4 class="tm-text-primary">Mark your favourites</h3>
           </div>
         </div>
         <div class="feature">
           <div class="feature-panel">
             <img src="../assets/icons/write.svg" class="icon"/>
-            <h3 class="tm-text-primary">Write a review</h3>
+            <h4 class="tm-text-primary">Write a review</h4>
           </div>
         </div>
         <div class="feature">
           <div class="feature-panel">
             <img src="../assets/icons/lightbulb.svg" class="icon"/>
-            <h3 class="tm-text-primary">Find new games</h3>
+            <h4 class="tm-text-primary">Find new games</h4>
           </div>
         </div>
       </div>
@@ -111,7 +111,7 @@
       <div class="prompt-text-small">
         <a
           class="prompt-text-link"
-          href="gallery.html"
+          href="gallery.php"
           >Click here</a
         >
         to see our latest additions to the catalog.

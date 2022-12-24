@@ -17,25 +17,10 @@
     <div class="filling-body">
       <?php include '../templates/navbar.php'; ?>
 
-      <div class="filling-test"></div>
-      <footer class="bottom-part">
-        <div class="container">
-          <div class="">
-            <div class="">
-              <h3 class="tm-text-primary">Our Links</h3>
-              <ul class="">
-                <li><a href="#">Advertise</a></li>
-                <li><a href="#">Support</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Terms of Use</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <?php include '../templates/gallery-upload-panel.php'; ?>
 
-      <?php include '../templates/footer.php'; ?>
+      
     </div>
+    <?php include '../templates/footer.php'; ?>
   </body>
 </html>

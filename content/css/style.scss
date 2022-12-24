@@ -579,6 +579,226 @@ figure {
   }
 }
 
+.footer {
+  background-color: $darker_white;
+  color: $muted_blue;
+  padding: 2rem 0;
+  min-height: 15rem;
+  .footer-heading {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  .footer-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    li {
+      margin-bottom: 0.5rem;
+      a {
+        color: $muted_blue;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.login-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  .signup {
+    width: 350px;
+    height: 500px;
+    border-radius: 10px;
+    border: 1px solid#eee;
+    .label-text {
+      color: $muted_blue;
+      font-size: 1.8em;
+      justify-content: center;
+      display: flex;
+      flex: auto;
+      margin: 60px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .signup-link {
+      color: $muted_blue;
+      text-decoration: none;
+      font-size: 0.8em;
+      justify-content: center;
+      display: flex;
+      flex: auto;
+      margin: 10px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    input {
+      width: 60%;
+      height: 20px;
+      background: $darkest_white;
+      justify-content: center;
+      display: flex;
+      margin: 20px auto;
+      padding: 10px;
+      border: none;
+      outline: none;
+      border-radius: 5px;
+    }
+    button {
+      width: 60%;
+      height: 40px;
+      margin: 10px auto;
+      justify-content: center;
+      display: block;
+      color: #fff;
+      background: #573b8a;
+      font-size: 1em;
+      font-weight: bold;
+      margin-top: 20px;
+      outline: none;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #6d44b8;
+    }
+  }
+}
+.gallery-title {
+  color: $muted_blue;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 1.6rem;
+  margin-left: 10px;
+  margin-right: 10px
+}
+.gallery-upload {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  .upload {
+    width: 350px;
+    height: 400px;
+    border-radius: 10px;
+    border: 1px solid#ddd;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    .label-text {
+      color: $vivid_blue;
+      font-size: 1.8em;
+      justify-content: left;
+      margin-top: 10px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .input-file-group {
+      line-height: 24px;
+      font-size: 1em;
+      .input-file-label {
+        color: #212529;
+      }
+      .input-text {
+        width: 100%;
+        height: 1.5rem;
+      }
+
+      .select-genre {
+        width: 100%;
+        height: 1.5rem;
+      }
+      .input-file {
+        height: 1.5rem;
+      }
+    }
+
+    .button {
+      width: 60%;
+      height: 40px;
+      justify-content: left;
+      display: block;
+      color: #fff;
+      background: #573b8a;
+      font-size: 1em;
+      font-weight: bold;
+      outline: none;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .button:hover {
+      background: #6d44b8;
+    }
+  }
+}
+
+.gallery-profile {
+  margin-bottom: 30px;
+  margin-right: 10px;
+  margin-left: 10px;
+  h3 {
+    color: $muted_blue;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+  }
+
+  .gallery-item {
+    background-color: $darker_white;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    .item-info {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: left;
+      * {
+        padding-left: 5px;
+        padding-right: 5px
+      }
+      .name {
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: $vivid_blue;
+      }
+      .date {
+        font-size: 0.7rem;
+        font-weight: 300;
+      }
+      .icon {
+        max-width: 50px;
+        max-height: 50px;
+      }
+    
+    }
+    .gallery-picture-link {
+      display: inline-block;
+      border-radius: 10px;
+      width: 120px;
+      height: 120px;
+      background-color: red;
+      background-position: no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
 .max-width-250px {
   max-width: 250px !important;
 }

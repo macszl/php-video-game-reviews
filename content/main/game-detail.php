@@ -117,7 +117,7 @@
             <img src="../assets/images/img-01.jpg" />
             <figcaption class="">
               <h2>PLACEHOLDER VG TITLE TO BE FETCHED FROM DB</h2>
-              <a href="game-detail.html">View more</a>
+              <a href="game-detail.php">View more</a>
             </figcaption>
           </figure>
           <div class="date-informer">
@@ -130,7 +130,7 @@
             <img src="../assets/images/img-04.jpg" />
             <figcaption class="">
               <h2>PLACEHOLDER VG TITLE TO BE FETCHED FROM DB</h2>
-              <a href="game-detail.html">View more</a>
+              <a href="game-detail.php">View more</a>
             </figcaption>
           </figure>
           <div class="date-informer">
@@ -143,7 +143,7 @@
             <img src="../assets/images/img-05.jpg" />
             <figcaption class="">
               <h2>PLACEHOLDER VG TITLE TO BE FETCHED FROM DB</h2>
-              <a href="game-detail.html">View more</a>
+              <a href="game-detail.php">View more</a>
             </figcaption>
           </figure>
           <div class="date-informer">
@@ -156,7 +156,7 @@
             <img src="../assets/images/img-06.jpg" />
             <figcaption class="">
               <h2>PLACEHOLDER VG TITLE TO BE FETCHED FROM DB</h2>
-              <a href="game-detail.html">View more</a>
+              <a href="game-detail.php">View more</a>
             </figcaption>
           </figure>
           <div class="date-informer">
@@ -165,7 +165,7 @@
         </div>
       </div>
     </div>
-
+    
     <?php include '../templates/footer.php'; ?>
   </body>
 </html>

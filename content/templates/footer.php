@@ -1,7 +1,7 @@
 <footer class="bottom-part">
-  <div class="container">
-    <h3 class="tm-text-primary">Our Links</h3>
-    <ul class="">
+  <div class="footer">
+    <h3 class="footer-heading">Our Links</h3>
+    <ul class="footer-list">
       <li><a href="#">Advertise</a></li>
       <li><a href="#">Support</a></li>
       <li><a href="#">Contact</a></li>
