@@ -15,17 +15,14 @@ if (isset($_POST['submit'])) {
     header('Location: ../index.php?error=wrongpass');
     exit();
   }
-  
-  if(userExistsAndPasswordChecksOut($conn, $name, $password) )
-  {
+
+  if (userExistsAndPasswordChecksOut($conn, $name, $password)) {
     session_start();
     $_SESSION['name'] = $name;
     $_SESSION['password'] = $password;
-    header('Location: ../main/gallery.php');
+    header('Location: ../main/login_accepted.php');
     exit();
-  }
-  else
-  {
+  } else {
     header('Location: ../index.php?error=wronglogin');
     exit();
   }

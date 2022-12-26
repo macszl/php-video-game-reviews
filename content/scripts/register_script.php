@@ -30,7 +30,7 @@ if (isset($_POST['submit'])) {
   }
 
   insertUser($conn, $name, $email, $password);
-  header('Location: ../login/login_accepted.php');
+  header('Location: ../login/register_accepted.php');
   exit();
 } else {
   header('Location: ../index.php');

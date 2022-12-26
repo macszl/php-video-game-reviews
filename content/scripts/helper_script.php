@@ -69,9 +69,9 @@ function checkIfUserExists($conn, $user, $email)
   $row = mysqli_fetch_assoc($resultData);
   mysqli_stmt_close($stmt);
   if ($row) {
-    return false;
-  } else {
     return true;
+  } else {
+    return false;
   }
 }
 

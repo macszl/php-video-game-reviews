@@ -235,8 +235,6 @@
           </div>
         </div>
       </div>
-
-      <?php include 'gallery-upload-panel.php'?>
     
       <div class="menu-bar">
         <a

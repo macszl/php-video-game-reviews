@@ -16,10 +16,10 @@
 
     <body>
         <?php
-        echo 'Login failed.';
+        echo 'Registration successful.';
         echo 'Redirecting....';
         sleep(1);
-        header('Location: ../main/gallery.php');
+        header('Location: ../login/login.php');
         exit();
         ?>
     </body>
