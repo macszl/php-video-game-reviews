@@ -16,7 +16,17 @@
 
 <body>
     <div class="filling-body">
-        <?php include '../templates/navbar.php'; ?>
+        <?php
+        session_start();
+        require '../../vendor/autoload.php';
+
+        $loader = new Twig\Loader\FilesystemLoader('../templates');
+        $twig = new Twig\Environment($loader, [
+        'cache' => '../../dist',
+        ]);
+
+        include '../templates/navbar.php';    
+        ?>
         
         <div class="login-form"> 
             <form class="signup" action="../scripts/login_script.php" method="post">
@@ -30,7 +40,7 @@
         
     
     </div>
-    <?php include '../templates/footer.php'; ?>
+    <?php include '../components/footer.php'; ?>
 </body>
 
 </html>

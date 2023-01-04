@@ -1,0 +1,16 @@
+<div class="gallery">
+    {% for item in items %}
+        <div class="large-element medium-element small-element xsmall-element">
+            <figure class="effect-ming drop-down-item">
+            <img src="{{ item.path }}" />
+            <figcaption class="">
+                <h2>"{{ item.title }}"</h2>
+                <a href="game-detail.php" . "?id=" . "{{ item.id }}">View more</a>
+            </figcaption>
+            </figure>
+            <div class="date-informer">
+            <!-- <span class="">"{{ item.date }}"</span> -->
+            </div>
+        </div>
+    {% endfor %}
+</div>

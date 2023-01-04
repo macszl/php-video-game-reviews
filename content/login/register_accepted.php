@@ -18,8 +18,7 @@
         <?php
         echo 'Registration successful.';
         echo 'Redirecting....';
-        sleep(1);
-        header('Location: ../login/login.php');
+        header('refresh:2;url=../login/login.php');
         exit();
         ?>
     </body>

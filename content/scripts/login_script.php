@@ -7,12 +7,12 @@ if (isset($_POST['submit'])) {
   require_once 'helper_script.php';
 
   if (validateAlnum($name) == false) {
-    header('Location: ../index.php?error=wrongname');
+    header('Location: ../main/index.php?error=wrongname');
     exit();
   }
 
   if (validateAlnum($password) == false) {
-    header('Location: ../index.php?error=wrongpass');
+    header('Location: ../main/index.php?error=wrongpass');
     exit();
   }
 
@@ -20,10 +20,10 @@ if (isset($_POST['submit'])) {
     session_start();
     $_SESSION['name'] = $name;
     $_SESSION['password'] = $password;
-    header('Location: ../main/login_accepted.php');
+    header('Location: ../login/login_accepted.php');
     exit();
   } else {
-    header('Location: ../index.php?error=wronglogin');
+    header('Location: ../main/index.php?error=wronglogin');
     exit();
   }
 } else {

@@ -14,7 +14,17 @@
   </head>
 
   <body>
-      <?php include '../templates/navbar.php'; ?>
+      <?php
+      session_start();
+      require '../../vendor/autoload.php';
+
+      $loader = new Twig\Loader\FilesystemLoader('../templates');
+      $twig = new Twig\Environment($loader, [
+        'cache' => '../../dist',
+      ]);
+
+      include '../templates/navbar.php';    
+      ?>
       <h2 class="gallery-title">
         Welcome ${nick}! Check out your favourites and your latest reviews.
       </h2>
@@ -100,6 +110,6 @@
         </div>
       </div>
 
-    <?php include '../templates/footer.php'; ?>
+    <?php include '../components/footer.php'; ?>
   </body>
 </html>

@@ -14,7 +14,18 @@
   </head>
 
   <body>
-    <?php include '../templates/navbar.php'; ?>
+    <?php
+    session_start();
+    require '../../vendor/autoload.php';
+
+    $loader = new Twig\Loader\FilesystemLoader('../templates');
+    $twig = new Twig\Environment($loader, [
+      'cache' => '../../dist',
+    ]);
+
+    include '../templates/navbar.php';    
+    ?>
+
 
     <div class="backdrop-image">
       <div class="welcome-header">
@@ -27,8 +38,15 @@
       </div>
     </div>
     <div class="body-content">
+
       <h2 class="tm-text-primary">Featured games</h2>
       <div class="featured-games">
+
+      #select 4 random games from database and display them here
+      #get displayed image url from database
+      #get displayed game name from database
+      #get id from database
+
         <figure class="effect-ming drop-down-item">
           <img
             src="../assets/images/img-01-big.jpg"
@@ -81,6 +99,7 @@
           </figcaption>
         </figure>
       </div>
+
       <div class="vgreviews-features">
         <div class="feature">
           <div class="feature-panel">
@@ -118,6 +137,6 @@
       </div>
     </div>
 
-    <?php include '../templates/footer.php'; ?>
+    <?php include '../components/footer.php'; ?>
   </body>
 </html>

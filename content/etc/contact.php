@@ -14,7 +14,17 @@
   </head>
   <body>
     <div class="filling-body">
-      <?php include '../templates/navbar.php'; ?>
+      <?php
+      session_start();
+      require '../../vendor/autoload.php';
+
+      $loader = new Twig\Loader\FilesystemLoader('../templates');
+      $twig = new Twig\Environment($loader, [
+        'cache' => '../../dist',
+      ]);
+
+      include '../templates/navbar.php';    
+      ?>
 
       <div class="filling-test">
         <div class="">
@@ -67,7 +77,7 @@
         </div>
       </div>
 
-      <?php include '../templates/footer.php'; ?>
+      <?php include '../components/footer.php'; ?>
     </div>
   </body>
 </html>

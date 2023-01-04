@@ -60,7 +60,7 @@ function checkIfUserExists($conn, $user, $email)
   $stmt = mysqli_stmt_init($conn);
 
   if (!mysqli_stmt_prepare($stmt, $sql)) {
-    header('Location: ../index.php?error=stmtfailed');
+    header('Location: ../main/index.php?error=stmtfailed');
     exit();
   }
   mysqli_stmt_bind_param($stmt, 'ss', $email, $user);
@@ -81,7 +81,7 @@ function insertUser($conn, $user, $email, $password)
   $stmt = mysqli_stmt_init($conn);
 
   if (!mysqli_stmt_prepare($stmt, $sql)) {
-    header('Location: ../index.php?error=stmtfailed');
+    header('Location: ../main/index.php?error=stmtfailed');
     exit();
   }
   $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
@@ -96,7 +96,7 @@ function userExistsAndPasswordChecksOut($conn, $user, $password)
   $stmt = mysqli_stmt_init($conn);
 
   if (!mysqli_stmt_prepare($stmt, $sql)) {
-    header('Location: ../index.php?error=stmtfailed');
+    header('Location: ../main/index.php?error=stmtfailed');
     exit();
   }
   $hashedPassword = password_hash($password, PASSWORD_BCRYPT);

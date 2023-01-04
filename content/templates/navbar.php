@@ -1,34 +1,53 @@
-<nav class="navbar">
-  <div class="container">
-    <a
-      class="navbar-brand"
-      href="../main/index.php"
-    >
-      VGReviews.com
-    </a>
-
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a
-          class="navbar-small-txt"
-          href="../etc/admin.php"
-          >Admin</a
-        >
-      </li>
-      <li class="nav-item">
-        <a
-          class="navbar-small-txt"
-          href="../etc/contact.php"
-          >Contact</a
-        >
-      </li>
-      <li class="nav-item">
-        <a
-          class="navbar-small-txt"
-          href="../login/login.php"
-          >Login</a
-        >
-      </li>
-    </ul>
-  </div>
-</nav>
+<?php
+if (!isset($_SESSION['name']) || empty($_SESSION['name'])) {
+  echo $twig->render('navbar.html.twig', [
+    'navbar_brand' => 'VGReviews.com',
+    'navbar_items' => [
+      [
+        'href' => '../etc/contact.php',
+        'text' => 'Contact',
+      ],
+      [
+        'href' => '../login/login.php',
+        'text' => 'Login',
+      ],
+    ],
+  ]);
+} elseif ($_SESSION['name'] == 'admin') {
+  echo $twig->render('navbar.html.twig', [
+    'navbar_brand' => 'VGReviews.com',
+    'navbar_items' => [
+      [
+        'href' => '../etc/admin.php',
+        'text' => 'Admin',
+      ],
+      [
+        'href' => '../etc/contact.php',
+        'text' => 'Contact',
+      ],
+      [
+        'href' => '../login/logout.php',
+        'text' => 'Logout',
+      ],
+    ],
+  ]);
+} else {
+  echo $twig->render('navbar.html.twig', [
+    'navbar_brand' => 'VGReviews.com',
+    'navbar_items' => [
+      [
+        'href' => '../login/profile.php',
+        'text' => 'Profile',
+      ],
+      [
+        'href' => '../etc/contact.php',
+        'text' => 'Contact',
+      ],
+      [
+        'href' => '../login/logout.php',
+        'text' => 'Logout',
+      ],
+    ],
+  ]);
+}
+?>

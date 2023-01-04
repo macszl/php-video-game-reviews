@@ -18,8 +18,7 @@
         <?php
         echo 'Login successful.';
         echo 'Redirecting....';
-        sleep(1);
-        header('Location: ../main/gallery.php');
+        header('refresh:2;url=../main/gallery.php');
         exit();
         ?>
     </body>

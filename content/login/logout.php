@@ -16,9 +16,11 @@
 
     <body>
         <?php
-        echo 'Registration failed.';
+        echo 'Registration successful.';
         echo 'Redirecting....';
-        header('refresh:2;url=../login/login.php');
+        session_start();
+        session_destroy();
+        header('refresh:2;url=../main/index.php');
         exit();
         ?>
     </body>

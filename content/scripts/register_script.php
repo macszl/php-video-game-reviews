@@ -10,22 +10,22 @@ if (isset($_POST['submit'])) {
   require_once 'helper_script.php';
 
   if (validateAlnum($name) == false) {
-    header('Location: ../index.php?error=wrongname');
+    header('Location: ../main/index.php?error=wrongname');
     exit();
   }
 
   if (validateAlnum($password) == false) {
-    header('Location: ../index.php?error=wrongpass');
+    header('Location: ../main/index.php?error=wrongpass');
     exit();
   }
 
   if (validateEmail($email) == false) {
-    header('Location: ../index.php?error=wrongemail');
+    header('Location: ../main/index.php?error=wrongemail');
     exit();
   }
 
   if (checkIfUserExists($conn, $name, $email) == true) {
-    header('Location: ../index.php?error=userexists');
+    header('Location: ../main/index.php?error=userexists');
     exit();
   }
 
@@ -33,6 +33,6 @@ if (isset($_POST['submit'])) {
   header('Location: ../login/register_accepted.php');
   exit();
 } else {
-  header('Location: ../index.php');
+  header('Location: ../main/index.php');
   exit();
 }

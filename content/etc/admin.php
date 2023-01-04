@@ -15,12 +15,23 @@
 
   <body>
     <div class="filling-body">
-      <?php include '../templates/navbar.php'; ?>
+      <?php
+      session_start();
+      require '../../vendor/autoload.php';
 
-      <?php include '../templates/gallery-upload-panel.php'; ?>
+      $loader = new Twig\Loader\FilesystemLoader('../templates');
+      $twig = new Twig\Environment($loader, [
+        'cache' => '../../dist',
+      ]);
+
+      include '../templates/navbar.php';
+      if (isset($_SESSION['user']) && $_SESSION['user'] == 'admin') {
+        include '../components/gallery-upload-panel.php';
+      }
+      ?>
 
       
     </div>
-    <?php include '../templates/footer.php'; ?>
+    <?php include '../components/footer.php'; ?>
   </body>
 </html>
