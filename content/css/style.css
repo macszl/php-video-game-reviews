@@ -78,10 +78,8 @@
 }
 
 .body-content {
-  -webkit-margin-start: 40px;
-          margin-inline-start: 40px;
-  -webkit-margin-end: 40px;
-          margin-inline-end: 40px;
+  margin-inline-start: 40px;
+  margin-inline-end: 40px;
 }
 .body-content .vgreviews-features {
   display: flex;
@@ -157,10 +155,8 @@
 .body-content .featured-games figure img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: cover;
+  object-position: center;
   transition: all 0.3s ease-in-out;
 }
 .body-content .featured-games figure figcaption {
@@ -197,6 +193,7 @@ figure.effect-ming {
 }
 figure.effect-ming img {
   opacity: 0.9;
+  -webkit-transition: opacity 0.65s;
   transition: opacity 0.65s;
 }
 figure.effect-ming figcaption::before {
@@ -209,13 +206,17 @@ figure.effect-ming figcaption::before {
   box-shadow: 0 0 0 30px rgba(255, 255, 255, 0.2);
   content: "";
   opacity: 0;
+  -webkit-transition: opacity 0.65s, -webkit-transform 0.35s;
   transition: opacity 0.65s, transform 0.65s;
+  -webkit-transform: scale3d(1.4, 1.4, 1);
   transform: scale3d(1.4, 1.4, 1);
 }
 figure.effect-ming h2 {
   font-size: 1.3rem;
   opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale(1.5);
   transform: scale(1.5);
 }
 figure.effect-ming:hover figcaption {
@@ -223,10 +224,12 @@ figure.effect-ming:hover figcaption {
 }
 figure.effect-ming:hover figcaption::before {
   opacity: 1;
+  -webkit-transform: scale3d(1, 1, 1);
   transform: scale3d(1, 1, 1);
 }
 figure.effect-ming:hover h2 {
   opacity: 1;
+  -webkit-transform: scale3d(1, 1, 1);
   transform: scale3d(1, 1, 1);
 }
 figure.effect-ming:hover img {
@@ -234,14 +237,10 @@ figure.effect-ming:hover img {
 }
 
 figure {
-  -webkit-margin-before: 1em;
-          margin-block-start: 1em;
-  -webkit-margin-after: 1em;
-          margin-block-end: 1em;
-  -webkit-margin-start: 40px;
-          margin-inline-start: 40px;
-  -webkit-margin-end: 40px;
-          margin-inline-end: 40px;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 40px;
+  margin-inline-end: 40px;
   display: block;
 }
 
@@ -288,14 +287,10 @@ figure {
 }
 
 .date-informer {
-  -webkit-margin-before: 1em;
-          margin-block-start: 1em;
-  -webkit-margin-after: 1em;
-          margin-block-end: 1em;
-  -webkit-margin-start: 40px;
-          margin-inline-start: 40px;
-  -webkit-margin-end: 40px;
-          margin-inline-end: 40px;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 40px;
+  margin-inline-end: 40px;
 }
 
 .gallery {
@@ -427,8 +422,6 @@ figure {
 }
 .comment-box .user {
   display: flex;
-  width: -webkit-min-content;
-  width: -moz-min-content;
   width: min-content;
 }
 .comment-box textarea {
@@ -530,10 +523,8 @@ figure {
   color: #3399cc;
   margin-top: 2rem;
   margin-bottom: 2rem;
-  -webkit-margin-start: 40px;
-          margin-inline-start: 40px;
-  -webkit-margin-end: 40px;
-          margin-inline-end: 40px;
+  margin-inline-start: 40px;
+  margin-inline-end: 40px;
   font-size: 1.6rem;
 }
 
@@ -795,6 +786,35 @@ figure {
   margin: 0 0 0 0 !important;
 }
 
+.tooltip {
+  display: inline-block;
+  position: relative;
+  border-bottom: 1px dotted #666;
+  text-align: left;
+}
+.tooltip .bottom {
+  min-width: 200px;
+  /*max-width:400px;*/
+  top: 40px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: 20px;
+  color: #666666;
+  background-color: #eeeeee;
+  font-weight: normal;
+  font-size: 13px;
+  border-radius: 8px;
+  position: absolute;
+  z-index: 99999999;
+  box-sizing: border-box;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.tooltip:hover .bottom {
+  display: block;
+}
+
 @media (min-width: 490px) {
   .small-element {
     flex: 0 0 auto;
@@ -812,4 +832,6 @@ figure {
     flex: 0 0 auto;
     width: 25%;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */

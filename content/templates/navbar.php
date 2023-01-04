@@ -36,7 +36,7 @@ if (!isset($_SESSION['name']) || empty($_SESSION['name'])) {
     'navbar_brand' => 'VGReviews.com',
     'navbar_items' => [
       [
-        'href' => '../login/profile.php',
+        'href' => '../login/profile_page.php',
         'text' => 'Profile',
       ],
       [

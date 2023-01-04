@@ -1,0 +1,16 @@
+<div class="gallery-profile">
+    <h3>Favourites</h3>
+    {% for item in items %}
+    <div class="gallery-item">
+        <a
+        class="gallery-picture-link"
+        href="{{item.imagelink}}"
+        ></a>
+        <div class="item-info">
+            <p class="name"> {{item.title}} </p>
+            <p class="date">{{item.username}} FAVORITED THIS AT {{item.date}}</p>
+            <img src="../assets/icons/heart.svg" class="icon"/>
+        </div>
+    </div>
+    {% endfor %}
+</div>

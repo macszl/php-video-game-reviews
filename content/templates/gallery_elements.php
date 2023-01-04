@@ -16,31 +16,12 @@ class VideoGameObj
     $this->path = $path;
     $this->genres = $genres;
   }
+}
 
-  public function getGenres()
-  {
-    return $this->genres;
-  }
-
-  public function getPath()
-  {
-    return $this->path;
-  }
-
-  public function getTitle()
-  {
-    return $this->title;
-  }
-
-  public function getDescription()
-  {
-    return $this->description;
-  }
-
-  public function getId()
-  {
-    return $this->id;
-  }
+function convertToRelativePath($path)
+{
+  $path = str_replace('/opt/lampp/htdocs/content', '..', $path);
+  return $path;
 }
 
 $sql = 'SELECT * FROM videogames';
@@ -74,10 +55,10 @@ if ($resultCheck > 0) {
         }
       }
     }
-    array_push($videogames, new VideoGameObj($id, $title, $description, $path, $genresOfVideogame));
+    array_push($videogames, new VideoGameObj($id, $title, $description, convertToRelativePath($path), $genresOfVideogame));
   }
 }
-
+#removal of the first, empty element
 array_shift($videogames);
 
 $vidcons = [];
