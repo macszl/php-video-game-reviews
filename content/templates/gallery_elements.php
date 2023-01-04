@@ -85,38 +85,5 @@ for ($i = 0; $i < count($videogames); $i++) {
   $vidcons[$i] = (array) $videogames[$i];
 }
 
-echo '<pre>';
-var_dump([
-  'items' => $vidcons,
-]);
-echo '</pre>';
-echo '<br>';
-echo '<br>';
-echo '<pre>',
-  var_dump([
-    'items' => [
-      [
-        'id' => '12',
-        'title' => 'halo',
-        'description' => 'cool game',
-        'path' => '../assets/images/gallery/img-01.jpg',
-        'genres' => ['12', '5'],
-      ],
-    ],
-  ]);
-echo '</pre>';
-
 echo $twig->render('gallery_elements_copy.html.twig', ['items' => $vidcons]);
-
-echo $twig->render('gallery_elements_copy.html.twig', [
-  'items' => [
-    [
-      'id' => '12',
-      'title' => 'halo',
-      'description' => 'cool game',
-      'path' => '../assets/images/gallery/img-01.jpg',
-      'genres' => ['12', '5'],
-    ],
-  ],
-]);
 ?>
