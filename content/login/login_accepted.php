@@ -16,7 +16,7 @@
 
     <body>
         <?php
-        echo 'Login successful.';
+        echo 'Login successful. <br>';
         echo 'Redirecting....';
         header('refresh:2;url=../main/gallery.php');
         exit();

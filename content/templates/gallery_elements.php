@@ -1,6 +1,6 @@
 <?php
 require_once '../scripts/config_script.php';
-
+require_once '../scripts/helper_script.php';
 class VideoGameObj
 {
   public $id;
@@ -16,12 +16,6 @@ class VideoGameObj
     $this->path = $path;
     $this->genres = $genres;
   }
-}
-
-function convertToRelativePath($path)
-{
-  $path = str_replace('/opt/lampp/htdocs/content', '..', $path);
-  return $path;
 }
 
 $sql = 'SELECT * FROM videogames';

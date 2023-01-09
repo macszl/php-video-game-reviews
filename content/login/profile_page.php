@@ -15,20 +15,23 @@
 
   <body>
       <?php
+      
       session_start();
-      require '../../vendor/autoload.php';
+      if(isset($_GET['id'])){
+        require '../../vendor/autoload.php';
 
-      $loader = new Twig\Loader\FilesystemLoader('../templates');
-      $twig = new Twig\Environment($loader, [
-        'cache' => '../../dist',
-      ]);
+        $loader = new Twig\Loader\FilesystemLoader('../templates');
+        $twig = new Twig\Environment($loader, [
+          'cache' => '../../dist',
+        ]);
+      }
 
       include '../templates/navbar.php';    
-      ?>
-      <h2 class="gallery-title">
-        Welcome ${nick}! Check out your favourites and your latest reviews.
-      </h2>
 
+      include '../templates/profile_nick_message.php';
+
+      ?>
+      
     <?php include '../components/footer.php'; ?>
   </body>
 </html>

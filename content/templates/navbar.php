@@ -32,11 +32,23 @@ if (!isset($_SESSION['name']) || empty($_SESSION['name'])) {
     ],
   ]);
 } else {
+  include_once '../scripts/config_script.php';
+
+  $user_name = $_SESSION['name'];
+  $sql = "SELECT * FROM `users` WHERE `name` = '$user_name' ";
+
+  $result = mysqli_query($conn, $sql);
+  $resultCheck = mysqli_num_rows($result);
+  $uID = '';
+  while ($row = mysqli_fetch_assoc($result)) {
+    $uID = $row['user_id'];
+  }
+
   echo $twig->render('navbar.html.twig', [
     'navbar_brand' => 'VGReviews.com',
     'navbar_items' => [
       [
-        'href' => '../login/profile_page.php',
+        'href' => '../login/profile_page.php?id=' . $uID,
         'text' => 'Profile',
       ],
       [

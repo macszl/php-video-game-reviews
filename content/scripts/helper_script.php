@@ -111,3 +111,9 @@ function userExistsAndPasswordChecksOut($conn, $user, $password)
     return false;
   }
 }
+
+function convertToRelativePath($path)
+{
+  $path = str_replace('/opt/lampp/htdocs/content', '..', $path);
+  return $path;
+}

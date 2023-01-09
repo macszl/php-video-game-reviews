@@ -23,7 +23,7 @@
       'cache' => '../../dist',
     ]);
 
-    include '../templates/navbar.php';    
+    include '../templates/navbar.php';
     ?>
 
 
@@ -41,11 +41,6 @@
 
       <h2 class="tm-text-primary">Featured games</h2>
       <div class="featured-games">
-
-      #select 4 random games from database and display them here
-      #get displayed image url from database
-      #get displayed game name from database
-      #get id from database
 
         <figure class="effect-ming drop-down-item">
           <img

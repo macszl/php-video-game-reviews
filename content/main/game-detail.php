@@ -25,19 +25,18 @@
 
     include '../templates/navbar.php';
 
+    include '../templates/game_detail_container.php';
     echo '<div class=""> 
             <h2 class="">Other games</h2> 
           </div>';
 
-    include '../templates/gallery.php';
-    include '../templates/game_detail_container.php';
+    include '../templates/gallery_elements.php';
 
     echo '<div class="">
             <h2 class="">Comments</h2>
           </div>';
 
     include '../templates/game_detail_comments.php';
-
     ?>    
     <?php include '../components/footer.php'; ?>
   </body>

@@ -16,7 +16,7 @@
 
     <body>
         <?php
-        echo 'Login failed.';
+        echo 'Login failed. <br>';
         echo 'Redirecting....';
         header('refresh:2;url=../main/gallery.php');
         exit();

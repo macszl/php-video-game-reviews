@@ -1,5 +1,5 @@
 <div class="gallery-upload">
-  <form class="upload" action="gallery-upload.php" method="post" enctype="multipart/form-data">
+  <form class="upload" action="../scripts/gallery_upload_script.php" method="post" enctype="multipart/form-data">
     <label class="label-text">Upload new game</label>
     
     <div class="input-file-group">

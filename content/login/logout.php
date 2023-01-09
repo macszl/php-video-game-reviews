@@ -16,7 +16,7 @@
 
     <body>
         <?php
-        echo 'Registration successful.';
+        echo 'Logging out <br>';
         echo 'Redirecting....';
         session_start();
         session_destroy();

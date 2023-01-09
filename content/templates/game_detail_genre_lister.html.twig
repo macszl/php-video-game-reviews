@@ -2,9 +2,9 @@
     <h2 class="">Genres</h2>
     {% for item in items %}
     <div class="tooltip tm-text-primary">
-        Action
+        {{item.title}}}
         <div class="bottom">
-            <p>Genre description. Genre description.Genre description.Genre description.Genre description.Genre description.Genre description.Genre description.Genre description.Genre description.Genre description.</p>
+            <p>{{item.description}}</p>
         </div>
     </div>
     {% endfor %}

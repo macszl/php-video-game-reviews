@@ -16,7 +16,7 @@
 
     <body>
         <?php
-        echo 'Registration successful.';
+        echo 'Registration successful. <br>';
         echo 'Redirecting....';
         header('refresh:2;url=../login/login.php');
         exit();
