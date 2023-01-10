@@ -147,12 +147,10 @@ $background-color_1: rgba(58, 52, 42, 0);
     font-weight: 300;
     text-align: center;
     margin-bottom: 1rem;
-    a {
-      color: $muted_blue;
-      text-decoration: none;
-      &:hover {
+    text-decoration: none;
+    color: $muted_blue;
+    &:hover {
         color: $vivid_blue;
-      }
     }
   }
 
@@ -576,6 +574,8 @@ figure {
     font-size: 1.5rem;
     font-weight: 400;
     margin-bottom: 1rem;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8)
   }
 }
 
