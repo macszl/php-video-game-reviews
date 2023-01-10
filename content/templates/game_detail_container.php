@@ -38,6 +38,5 @@ for ($i = 0; $i < count($gameObjects); $i++) {
   $gameArrays[$i] = (array) $gameObjects[$i];
 }
 
-echo $twig->render('game_detail_container.html.twig', ['item' => $gameArrays[0]]);
-
+echo $twig->render('game_detail_container.html.twig', ['item' => $gameArrays[0], 'gameID' => $_GET['id']]);
 ?>

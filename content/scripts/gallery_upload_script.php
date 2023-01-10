@@ -1,8 +1,4 @@
 <?php
-function gallery_upload_update_db_info($filename, $destination)
-{
-  
-}
 if( isset($_POST['gallery-upload-submit']) ) {
   $title = $_POST['title'];
   $file = $_FILES['fileToUpload'];

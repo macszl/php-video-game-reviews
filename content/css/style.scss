@@ -789,9 +789,8 @@ figure {
     .gallery-picture-link {
       display: inline-block;
       border-radius: 10px;
-      width: 120px;
+      width: 214px;
       height: 120px;
-      background-color: red;
       background-position: no-repeat;
       background-size: cover;
     }
@@ -839,6 +838,80 @@ figure {
   display: block;
 }
 
+.game-detail-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  gap: 1rem;
+  .game-detail-title {
+    font-size: 48px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    color: $muted_blue;
+  }
+
+  .game-detail-desc {
+    font-size: 20px;
+    flex-basis: 50%;
+  }
+
+  .game-detail-img {
+    flex-basis: 50%;
+    width: 100%;
+  }
+}
+
+.game-detail-title-ext {
+  font-size: 36px;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+  color: $muted_blue;
+  padding: 12px;
+}
+
+.all-content {
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.heart {
+  fill: #ff0000;
+  position: relative;
+  top: 5px;
+  width: 40px;
+  animation: pulse 1s ease infinite;
+}
+
+.heart:hover {
+  fill: #ee5959;
+  position: relative;
+  top: 5px;
+  width: 40px;
+  animation: pulse 1s ease infinite;
+}
+
+.heart-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  row-gap: 60px;
+  column-gap: 60px;
+  padding: 12px;
+  border-radius: 10px;
+  border: rgba(0, 0, 0, 0.5) 1px solid;
+}
+
+.invisible-button {
+  visibility: hidden;
+  cursor: pointer;
+  .heart {
+    visibility: visible !important;
+  }
+}
 @media (min-width: 490px) {
   .small-element {
     flex: 0 0 auto;

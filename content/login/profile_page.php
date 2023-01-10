@@ -29,7 +29,8 @@
       include '../templates/navbar.php';    
 
       include '../templates/profile_nick_message.php';
-
+      include '../templates/profile_comments.php';
+      include '../templates/profile_favorites.php';
       ?>
       
     <?php include '../components/footer.php'; ?>

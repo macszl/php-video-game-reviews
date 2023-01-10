@@ -23,20 +23,7 @@
       'cache' => '../../dist',
     ]);
 
-    include '../templates/navbar.php';
-
-    include '../templates/game_detail_container.php';
-    echo '<div class=""> 
-            <h2 class="">Other games</h2> 
-          </div>';
-
-    include '../templates/gallery_elements.php';
-
-    echo '<div class="">
-            <h2 class="">Comments</h2>
-          </div>';
-
-    include '../templates/game_detail_comments.php';
+    include '../templates/game_detail_all_content.php';
     ?>    
     <?php include '../components/footer.php'; ?>
   </body>

@@ -29,13 +29,13 @@ if ($resultCheck > 0) {
     $description = $row['review_content'];
     
     $uid = $row['user_id'];
-    $sql = "SELECT * FROM users WHERE id = $uid";
+    $sql = "SELECT * FROM `users` WHERE `user_id` = $uid";
     $userQueryResult = mysqli_query($conn, $sql);
     $userResultCheck = mysqli_num_rows($userQueryResult);
 
     if ($userResultCheck > 0) {
       $row = mysqli_fetch_assoc($userQueryResult);
-      $username = $row['username'];
+      $username = $row['name'];
 
       array_push($commentObjects, new CommentObject($username, $description, $date));
     }
@@ -49,6 +49,6 @@ for ($i = 0; $i < count($commentObjects); $i++) {
   $commentArrays[$i] = (array) $commentObjects[$i];
 }
 
-echo $twig->render('game_detail_comments.html.twig', ['items' => $commentArrays]);
+echo $twig->render('game_detail_comments.html.twig', ['items' => $commentArrays, 'loggedInUsername' => $_SESSION['name'], 'gameId' => $game_id]);
 
 ?>

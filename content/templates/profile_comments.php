@@ -1,5 +1,6 @@
 <?php
 require_once '../scripts/config_script.php';
+require_once '../scripts/helper_script.php';
 
 class CommentObj
 {
@@ -18,14 +19,8 @@ class CommentObj
   }
 }
 
-function convertToRelativePath($path)
-{
-  $path = str_replace('/opt/lampp/htdocs/content', '..', $path);
-  return $path;
-}
-
-$username = $_SESSION['username'];
-$sql = "SELECT * FROM users WHERE name = $username";
+$username = "\"" . $_SESSION['name'] . "\"";
+$sql = "SELECT * FROM `users` WHERE `name` =  $username";
 
 $result = mysqli_query($conn, $sql);
 $resultCheck = mysqli_num_rows($result);
@@ -33,25 +28,27 @@ $commentObjects[] = [];
 
 if ($resultCheck > 0) {
   while ($row = mysqli_fetch_assoc($result)) {
-    $user_id = $row['id'];
+    $user_id = $row['user_id'];
     $sql = "SELECT * FROM reviews WHERE user_id = $user_id";
-    $genreQueryResult = mysqli_query($conn, $sql);
-    $genreResultCheck = mysqli_num_rows($genreQueryResult);
+    $reviewQueryResult = mysqli_query($conn, $sql);
+    $reviewResultCheck = mysqli_num_rows($reviewQueryResult);
 
-    if ($genreResultCheck > 0) {
-      $row = mysqli_fetch_assoc($genreQueryResult);
-      $title = $row['title'];
-      $description = $row['review_content'];
-      $date = $row['date'];
-      $vg_id = $row['vg_id'];
-      $sql = "SELECT * FROM videogames WHERE id = $vg_id";
-      $genreQueryResult = mysqli_query($conn, $sql);
-      $genreResultCheck = mysqli_num_rows($genreQueryResult);
-      if ($genreResultCheck > 0) {
-        $row = mysqli_fetch_assoc($genreQueryResult);
-        $imagelink = convertToRelativePath($row['path']);
+    if ($reviewResultCheck > 0) {
+      while ($row = mysqli_fetch_assoc($reviewQueryResult)) {
+        $title = '';
+        $description = $row['review_content'];
+        $date = $row['date'];
+        $vg_id = $row['vg_id'];
+        $sql = "SELECT * FROM videogames WHERE id = $vg_id";
+        $vidyaQueryResult = mysqli_query($conn, $sql);
+        $vidyaResultCheck = mysqli_num_rows($vidyaQueryResult);
+        if ($vidyaResultCheck > 0) {
+          $row = mysqli_fetch_assoc($vidyaQueryResult);
+          $title = $row['title'];
+          $imagelink = convertToRelativePath($row['path']);
+        }
+        array_push($commentObjects, new CommentObj($title, $username, $description, $imagelink, $date));
       }
-      array_push($commentObjects, new CommentObj($title, $username, $description, $imagelink, $date));
     }
   }
 }
