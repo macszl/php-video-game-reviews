@@ -4,10 +4,11 @@
     echo '<div class="all-content">';
 
     include '../templates/game_detail_container.php';
+    include '../templates/game_detail_genre_lister.php';
 
     echo '<h2 class="game-detail-title-ext"style=" text-align: center;">Other games</h2> ';
 
-    include '../templates/gallery_elements.php';
+    include '../templates/gallery_elements_small.php';
 
     echo ' <h2 class="game-detail-title-ext"style=" text-align: center;">Comments</h2>';
           

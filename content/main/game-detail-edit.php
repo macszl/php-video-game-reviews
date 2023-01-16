@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>VG Reviews</title>
+    <title>VG Reviews Main page</title>
     <link
       rel="stylesheet"
       href="../css/style.css"
@@ -24,15 +24,10 @@
     ]);
 
     include '../templates/navbar.php';
-    include '../components/backdrop_prompt.php';
-    echo '<div class="body-content">';
-    echo '<h2 class="tm-text-primary">Featured games</h2>';
-    include '../templates/gallery_elements_small.php';
-    include '../components/feature-cards.php';
-    include '../components/index_to_gallery_prompt.php';
-    echo ' </div> ';
-    ?>
+    include '../components/edit_form.php'
 
+    ?>    
     <?php include '../components/footer.php'; ?>
+
   </body>
 </html>

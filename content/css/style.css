@@ -188,6 +188,7 @@
 
 figure.effect-ming {
   background: #030c17;
+  border-radius: 5px;
 }
 figure.effect-ming img {
   opacity: 0.9;
@@ -246,6 +247,7 @@ figure {
   position: relative;
   overflow: hidden;
   text-align: center;
+  border-radius: 5px;
   cursor: pointer;
 }
 .drop-down-item img {
@@ -299,6 +301,9 @@ figure {
   margin-top: calc(var(--bs-gutter-y) * -1);
   margin-right: calc(var(--bs-gutter-x) / -2);
   margin-left: calc(var(--bs-gutter-x) / -2);
+  border: rgba(0, 0, 0, 0.1) 1px solid;
+  border-radius: 5px;
+  align-items: center;
 }
 
 .xsmall-element {
@@ -321,6 +326,7 @@ figure {
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
+  min-width: 180px;
 }
 .btn:disabled {
   color: #ffffff;
@@ -363,10 +369,10 @@ figure {
 .menu-bar {
   display: flex;
   flex: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .sub-menu {
@@ -658,8 +664,8 @@ figure {
   margin-top: 2rem;
   margin-bottom: 2rem;
   font-size: 1.6rem;
-  margin-left: 10px;
-  margin-right: 10px;
+  font-weight: 300;
+  text-align: center;
 }
 
 .gallery-upload {
@@ -885,6 +891,11 @@ figure {
 }
 .invisible-button .heart {
   visibility: visible !important;
+}
+
+.gallery-welcome-title {
+  color: #3399cc;
+  font-size: 1.6rem;
 }
 
 @media (min-width: 490px) {

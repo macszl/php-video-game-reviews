@@ -29,6 +29,6 @@
     <a
         href="javascript:void(0);"
         class="btn"
-        >Next Page</a
+        >Next</a
     >
 </div>

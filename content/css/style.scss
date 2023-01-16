@@ -150,7 +150,7 @@ $background-color_1: rgba(58, 52, 42, 0);
     text-decoration: none;
     color: $muted_blue;
     &:hover {
-        color: $vivid_blue;
+      color: $vivid_blue;
     }
   }
 
@@ -215,6 +215,7 @@ $background-color_1: rgba(58, 52, 42, 0);
 
 figure.effect-ming {
   background: #030c17;
+  border-radius: 5px;
   img {
     opacity: 0.9;
     -webkit-transition: opacity 0.65s;
@@ -276,6 +277,7 @@ figure {
   position: relative;
   overflow: hidden;
   text-align: center;
+  border-radius: 5px;
   cursor: pointer;
   img {
     position: relative;
@@ -327,6 +329,9 @@ figure {
   margin-top: calc(var(--bs-gutter-y) * -1);
   margin-right: calc(var(--bs-gutter-x) / -2);
   margin-left: calc(var(--bs-gutter-x) / -2);
+  border: rgba(0, 0, 0, 0.1) 1px solid;
+  border-radius: 5px;
+  align-items: center;
 }
 .xsmall-element {
   flex: 0 0 auto;
@@ -351,6 +356,7 @@ figure {
     background-color: $vivid_blue;
     border-color: $vivid_blue;
   }
+  min-width: 180px;
 }
 .btn-small {
   color: $vivid_blue;
@@ -384,10 +390,10 @@ figure {
 .menu-bar {
   display: flex;
   flex: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 .sub-menu {
   display: flex;
@@ -575,7 +581,7 @@ figure {
     font-weight: 400;
     margin-bottom: 1rem;
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.8)
+    color: rgba(255, 255, 255, 0.8);
   }
 }
 
@@ -679,8 +685,8 @@ figure {
   margin-top: 2rem;
   margin-bottom: 2rem;
   font-size: 1.6rem;
-  margin-left: 10px;
-  margin-right: 10px;
+  font-weight: 300;
+  text-align: center;
 }
 .gallery-upload {
   display: flex;
@@ -911,6 +917,11 @@ figure {
   .heart {
     visibility: visible !important;
   }
+}
+
+.gallery-welcome-title {
+  color: $muted_blue;
+  font-size: 1.6rem;
 }
 @media (min-width: 490px) {
   .small-element {

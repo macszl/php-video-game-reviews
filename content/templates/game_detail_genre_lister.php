@@ -14,7 +14,7 @@ class GenreObj
 }
 
 $game_id = $_GET['id'];
-$sql = "SELECT * FROM genres_videogames WHERE id = $game_id";
+$sql = "SELECT * FROM genres_videogames WHERE vg_id = $game_id";
 
 $result = mysqli_query($conn, $sql);
 $resultCheck = mysqli_num_rows($result);
