@@ -2,9 +2,9 @@
 require_once '../scripts/config_script.php';
 require_once '../scripts/helper_script.php';
 
-$videogames = [];
-$vidcons = getLatestVideogamesObjects($conn, 4);
-for ($i = 0; $i < count($videogames); $i++) {
+$videogames = getLatestVideogamesObjects($conn);;
+$vidcons = [];
+for ($i = 0; $i < 4; $i++) {
   $vidcons[$i] = (array) $videogames[$i];
 }
 
