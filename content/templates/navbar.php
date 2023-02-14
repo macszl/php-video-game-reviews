@@ -18,7 +18,7 @@ if (!isset($_SESSION['name']) || empty($_SESSION['name'])) {
     'navbar_brand' => 'VGReviews.com',
     'navbar_items' => [
       [
-        'href' => '../etc/admin.php',
+        'href' => '../main/game-detail-upload.php',
         'text' => 'Admin',
       ],
       [

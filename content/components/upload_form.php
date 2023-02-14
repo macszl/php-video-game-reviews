@@ -1,22 +1,14 @@
 <div class="center-flexbox">
     <div class="edit-form-wrapper">
-        <h2 class="title"> Edit 
-            <?php 
-            $mysqli = new mysqli('localhost', 'root', '', 'vgreviews');
-            $id = $_GET['id'];
-            $result = $mysqli->query("SELECT title FROM videogames WHERE id = $id");
-            while ($row = $result->fetch_assoc()) { 
-                echo $row['title'];
-            }
-            ?> properties</h2>
+        <h2 class="title"> Add a game to DB</h2>
         <form class="edit-form" action="edit_page.php" method="post" enctype="multipart/form-data">
-            <label class="edit-title-label" for="title">Change title:</label>
+            <label class="edit-title-label" for="title">Add title:</label>
             <input class="edit-title-textarea" type="text" id="title" name="title">
             
-            <label class="edit-image-label" for="image">Change image:</label>
+            <label class="edit-image-label" for="image">Add image:</label>
             <input class="edit-image-fileinput" type="file" id="image" name="image">
 
-            <label class="edit-desc-label" for="text">Change description:</label>
+            <label class="edit-desc-label" for="text">Add description:</label>
             <textarea class="edit-desc-textarea" id="text" name="text"></textarea>
 
         </form>
@@ -42,7 +34,7 @@
         
         <input type="hidden" name="list" id="list-input">
         <div class="save-buttons">
-            <button class="edit-form-cancel" type="button" onclick="window.location.href='../main/game-detail.php?id=<?php echo $_GET['id'] ?>'">Cancel</button>
+            <button class="edit-form-cancel" type="button" onclick="window.location.href='../main/gallery.php'">Cancel</button>
             <input class="edit-form-submit" type="submit" onclick="submitForm()" value="Save Form">
         </div>
     </div>
@@ -88,7 +80,7 @@
         formData.append("image", image);
 
         var xhr = new XMLHttpRequest();
-        xhr.open("POST", "../scripts/gallery_update_script.php?id=<?php echo $_GET['id']?>", true);
+        xhr.open("POST", "../scripts/gallery_upload_script.php", true);
         xhr.send(formData);
     }
 </script>

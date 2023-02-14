@@ -1,33 +1,65 @@
 <?php
-if( isset($_POST['gallery-upload-submit']) ) {
-  $title = $_POST['title'];
-  $file = $_FILES['fileToUpload'];
+$title = $_POST['title'];
+$description = $_POST['text'];
+$genres = $_POST['genres'];
+$image = $_FILES['image'];
+$var_null = null;
 
-  $fileName = $_FILES['fileToUpload']['name'];
-  $fileTmpName = $_FILES['fileToUpload']['tmp_name'];
-  $fileSize = $_FILES['fileToUpload']['size'];
-  $fileError = $_FILES['fileToUpload']['error'];
-  $fileType = $_FILES['fileToUpload']['type'];
+if (empty($title) || empty($description) || empty($genres) || empty($image)) {
+  echo 'Please fill in all the required fields';
+  exit();
+}
+$genres = explode(',', $genres);
+array_shift($genres);
 
-  $fileExt = explode('.', $fileName);
-  $fileActualExt = strtolower(end($fileExt));
+$image_ext = strtolower(pathinfo($image['name'], PATHINFO_EXTENSION));
+$allowed_ext = ['jpg', 'jpeg', 'png', 'gif'];
+if (!in_array($image_ext, $allowed_ext)) {
+  echo 'Invalid image file type. Only JPG, JPEG, PNG, GIF are allowed.';
+  exit();
+}
 
-  $allowed = array('jpg', 'jpeg', 'png');
+$image_path = '../assets/images/gallery/' . $image['name'];
+if (move_uploaded_file($image['tmp_name'], $image_path)) {
+  echo 'File uploaded successfully.';
+} else {
+  echo 'Error uploading file';
+}
 
-  if(in_array($fileActualExt, $allowed)) {
-    if($fileError === 0) {
-      if($fileSize < 1000000) {
-        $fileNameNew = uniqid('', true).".".$fileActualExt;
-        $fileDestination = '../assets/images/gallery/'.$fileNameNew;
-        move_uploaded_file($fileTmpName, $fileDestination);
-        header("Location: ../etc/admin.php?uploadsuccess");
-      } else {
-        echo "Your file is too big!";
-      }
-    } else {
-      echo "There was an error uploading your file!";
-    }
-  } else {
-    echo "You cannot upload files of this type!";
-  }
-}   
+$mysqli = new mysqli('localhost', 'root', '', 'vgreviews');
+
+$stmt = $mysqli->prepare('INSERT INTO `videogames` (id, title, description, path) VALUES (?, ?, ?, ?)');
+$stmt->bind_param('isss', $var_null, $title, $description, $image_path);
+$stmt->execute();
+
+if ($stmt->affected_rows === -1) {
+  echo 'Error: ' . $stmt->error;
+} else {
+  echo 'Data inserted successfully.';
+}
+
+$stmt = $mysqli->prepare('SELECT id FROM videogames WHERE title = ?');
+$stmt->bind_param('s', $title);
+$stmt->execute();
+
+$result = $stmt->get_result();
+$row = $result->fetch_assoc();
+$vg_id = $row['id'];
+
+foreach ($genres as $genre) {
+  $stmt = $mysqli->prepare('SELECT id FROM genres WHERE title = ?');
+  $stmt->bind_param('s', $genre);
+  $stmt->execute();
+
+  $result = $stmt->get_result();
+  $row = $result->fetch_assoc();
+  $genre_id = $row['id'];
+
+  $stmt = $mysqli->prepare('INSERT INTO `genres_videogames` (id, genre_id, vg_id) VALUES (?, ?, ?)');
+  $stmt->bind_param('iii', $var_null, $genre_id, $vg_id);
+  $stmt->execute();
+}
+
+$stmt->close();
+$mysqli->close();
+?>

@@ -2,14 +2,18 @@
     {% for item in items %}
     <div class="post-comment">
         <div class="list-comment">
-        <div class="user">
-            <div class="user-meta">
-                <div class="name">{{item.username}}</div>
-                <div class="date">{{item.date}}</div>
+            <div class="user">
+                <div class="user-meta">
+                    <div class="name" id="nick">{{item.username}}</div>
+                    {% if loggedInUsername == 'admin' %}
+                        <button href="javascript:void(0);" class="ban-user" id="ban-user" onclick="banUser()">Ban User</button>
+                        <button href="javascript:void(0);" class="delete-comment" id="delete-comment" onclick="deleteComment()">Delete Comment</button>
+                    {% endif %}
+                    <div class="date">{{item.date}}</div>
+                </div>
             </div>
         </div>
-        </div>
-        <div class="comment-post">{{item.description}}</div>
+        <div class="comment-post" id="text">{{item.description}}</div>
     </div>
     {% endfor %}
     

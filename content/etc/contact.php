@@ -27,56 +27,19 @@
       ?>
 
       <div class="filling-test">
-        <div class="">
-          <div class="">
-            <div class="">
-              <h2 class="tm-text-primary">Our Address</h2>
-              <p class="">
-                Quisque eleifend mi et nisi eleifend pretium. Duis porttitor accumsan arcu id rhoncus. Praesent fermentum venenatis ipsum, eget
-                vestibulum purus.
-              </p>
-              <p class="">
-                Nulla ut scelerisque elit, in fermentum ante. Aliquam congue mattis erat, eget iaculis enim posuere nec. Quisque risus turpis, tempus
-                in iaculis.
-              </p>
-              <address class="">
-                120-240 Fusce eleifend varius tempus<br />
-                Duis consectetur at ligula 10660
-              </address>
-              <ul class="">
-                <li>
-                  <a
-                    href="#"
-                    class="tm-text-gray"
-                  >
-                    <i class=""></i>
-                    Email: 235989@edu.p.lodz.pl
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="tm-text-gray"
-                  >
-                    <i class=""></i>
-                    Tel: 012-345-6789
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="tm-text-gray"
-                  >
-                    <i class=""></i>
-                    URL: brak
-                  </a>
-                </li>
-              </ul>
-            </div>
+        <div class="contact-container">
+          <div class="contact-wrapper">
+            <p class="contact-header">Hello, my name is Maciej Szlendak!</p>
+            <p class="contact-parahraph">I am both the creator and administrator of this website</p>
+            <p class="contact-paragraph">Please contact me if any support is needed</p>
+            <p class="contact-paragraph">My contact data:</p>
+            <p class="contact-paragraph">Email:235989@edu.p.lodz.pl</p>
+            <p class="contact-paragraph">URL: github.com/macszl </p>
+            <p class="contact-paragraph">Telephone: 123-456-789</p>
           </div>
         </div>
-      </div>
-
+        
+        
       <?php include '../components/footer.php'; ?>
     </div>
   </body>

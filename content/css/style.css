@@ -410,6 +410,24 @@ figure {
   padding: 8px;
   overflow: hidden;
 }
+.comment-session .post-comment .list-comment .user .user-meta .ban-user {
+  width: 80px;
+  font-size: 1rem;
+  background-color: #3399cc;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 5px 5px 5px 5px;
+  cursor: pointer;
+}
+.comment-session .post-comment .list-comment .user .user-meta .delete-comment {
+  width: 160px;
+  font-size: 1rem;
+  background-color: #3399cc;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 5px 5px 5px 5px;
+  cursor: pointer;
+}
 .comment-session .post-comment .list-comment .date {
   font-size: 12px;
 }
@@ -934,6 +952,259 @@ figure {
   background-color: #0d6efd;
   color: #fff;
   cursor: pointer;
+}
+
+.center-flexbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edit-form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  gap: 1rem;
+  width: 60%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: rgba(0, 0, 0, 0.2) 1px solid;
+  border-radius: 10px;
+}
+.edit-form-wrapper .title {
+  font-size: 3rem;
+  font-weight: 300;
+  color: #0d6efd;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+.edit-form-wrapper .edit-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 60%;
+}
+.edit-form-wrapper .edit-form .edit-genre-interactives {
+  height: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+}
+.edit-form-wrapper .edit-form .edit-title-label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #0d6efd;
+}
+.edit-form-wrapper .edit-form .edit-title-textarea {
+  width: 100%;
+  height: 2rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+.edit-form-wrapper .edit-form .edit-image-label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #0d6efd;
+}
+.edit-form-wrapper .edit-form .edit-image-fileinput {
+  width: 100%;
+  height: 2rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+.edit-form-wrapper .edit-form .edit-image-fileinput::-webkit-file-upload-button {
+  width: 25%;
+  height: 100%;
+  border-radius: 5px;
+  border: 1px solid #bbb;
+  font-size: 1rem;
+}
+.edit-form-wrapper .edit-form .edit-desc-label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #0d6efd;
+}
+.edit-form-wrapper .edit-form .edit-desc-textarea {
+  width: 100%;
+  height: 16rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+.edit-form-wrapper .edit-form .edit-genre-label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #0d6efd;
+}
+.edit-form-wrapper .edit-form .edit-genre-dropdown-menu {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+.edit-form-wrapper .edit-form .edit-genre-dropdown-menu .edit-genre-option {
+  font-size: 1rem;
+}
+.edit-form-wrapper .edit-form .edit-genre-button {
+  width: 45%;
+  height: 100%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background-color: #0d6efd;
+  color: #fff;
+  cursor: pointer;
+}
+.edit-form-wrapper .edit-form-genre-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 60%;
+}
+.edit-form-wrapper .edit-form-genre-list .edit-form-genre-list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 120px;
+  padding-left: 2px;
+  padding-right: 2px;
+  border: rgba(0, 0, 0, 0.2) 1px solid;
+  border-radius: 5px;
+}
+.edit-form-wrapper .edit-form-genre-list .edit-form-genre-list-item .edit-form-genre-list-item-text {
+  font-size: 1rem;
+}
+.edit-form-wrapper .edit-form-genre-list .edit-form-genre-list-item .edit-form-genre-list-item-remove {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background-color: #0d6efd;
+  color: #fff;
+  cursor: pointer;
+}
+.edit-form-wrapper .edit-form-genre-list-save-button {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background-color: #0d6efd;
+  color: #fff;
+  cursor: pointer;
+}
+.edit-form-wrapper .edit-form-cancel {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background-color: #0d6efd;
+  color: #fff;
+  cursor: pointer;
+}
+.edit-form-wrapper .edit-form-submit {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background-color: #0d6efd;
+  color: #fff;
+  cursor: pointer;
+}
+.edit-form-wrapper .save-buttons {
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  height: 2rem;
+  margin-top: 4rem;
+}
+
+.go-to-admin-form {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background-color: #0d6efd;
+  color: #fff;
+  cursor: pointer;
+}
+
+.terms-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.terms-wrapper {
+  display: flex;
+  width: 70%;
+  flex-direction: column;
+  row-gap: 2rem;
+  align-items: flex-start;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.contact-wrapper {
+  display: flex;
+  width: auto;
+  flex-direction: column;
+  row-gap: 2rem;
+  align-items: flex-start;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin-top: 5rem;
+  margin-bottom: 10rem;
+}
+
+.terms-header {
+  font-size: 1.6rem;
+  color: #0d6efd;
+}
+
+.contact-header {
+  font-size: 2rem;
+  color: #0d6efd;
+}
+
+.term-paragraph {
+  font-size: 1rem;
+}
+
+.contact-paragraph {
+  font-size: 1rem;
 }
 
 @media (min-width: 490px) {
